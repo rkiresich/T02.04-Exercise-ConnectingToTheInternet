@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
         String githubSearchResults = null;
         try{
             githubSearchResults = NetworkUtils.getResponseFromHttpUrl(githubSearchUrl);
+            mSearchResultsTextView.setText(githubSearchResults);
         } catch (IOException e) {
             e.printStackTrace();
-            mSearchResultsTextView.setText(githubSearchResults);
         }
 
         // TODO (3) Surround the call to getResponseFromHttpUrl with a try / catch block to catch an IOException
